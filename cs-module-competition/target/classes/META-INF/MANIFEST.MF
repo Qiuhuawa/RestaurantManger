@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: cs-module-competition
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 10105
+Implementation-Vendor-Id: org.zkpk
+Build-Jdk: 1.8.0_45
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/cs-project/cs-module-competition
+Created-By: Maven Integration for Eclipse
+

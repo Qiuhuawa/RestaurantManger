@@ -1,0 +1,172 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.zkpk</groupId>
+    <artifactId>cs-project</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>cs-module-common</artifactId>
+  <packaging>jar</packaging>
+  <name>cs-module-common</name>
+  
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+  </properties>
+  
+  <dependencies>
+      	<!-- common -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        
+        <dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-compress</artifactId>
+		</dependency>
+        
+        <dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-text</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+            <artifactId>commons-configuration2</artifactId>
+		</dependency>  
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-beanutils</groupId>
+		    <artifactId>commons-beanutils</artifactId>
+		</dependency>
+      
+		<!-- log4j2 begin -->
+		<dependency>
+	        <groupId>org.slf4j</groupId>
+	        <artifactId>slf4j-api</artifactId>
+	    </dependency>
+	    
+        <!-- 桥接：告诉slf4j使用log4j2 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+        </dependency>
+        
+        <!-- 桥接：告诉commons logging使用Log4j2 -->
+        <dependency> <!-- 引入log4j2依赖 -->  
+	        <groupId>org.springframework.boot</groupId>  
+	        <artifactId>spring-boot-starter-log4j2</artifactId>  
+	    </dependency> 
+        
+        <!-- 分页支持pageHelper -->
+        <dependency>
+		    <groupId>com.github.pagehelper</groupId>
+		    <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <exclusions><!-- 去掉默认配置 -->  
+		       <exclusion>  
+		           <groupId>org.springframework.boot</groupId>  
+		           <artifactId>spring-boot-starter-logging</artifactId>  
+		       </exclusion>  
+		    </exclusions> 
+		</dependency>
+        
+        <dependency>
+		    <groupId>com.belerweb</groupId>
+		    <artifactId>pinyin4j</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcpkix-jdk15on</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcprov-jdk15on</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.google.zxing</groupId>
+		    <artifactId>core</artifactId>
+		</dependency>
+		
+		<dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+        </dependency>
+		
+		<!-- jackson begin -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <!-- jackson end -->
+        
+        <!-- fastjson -->
+        <dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		</dependency>
+		
+
+
+		
+		<dependency>
+		    <groupId>org.jsoup</groupId>
+		    <artifactId>jsoup</artifactId>
+		</dependency>
+		
+		<!-- poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+		</dependency>
+		
+		<dependency>
+          	<groupId>javax.servlet</groupId>
+          	<artifactId>javax.servlet-api</artifactId>
+          	<scope>provided</scope>
+      	</dependency>
+      	
+      	
+      	<dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+     </dependency>
+     
+     <!-- shiro begin -->
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-spring</artifactId>
+	</dependency>
+
+	<!-- shiro ehcache -->
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-ehcache</artifactId>
+	</dependency>
+      	
+  </dependencies>
+  
+  <!-- 构建过程的设置     -->
+  <build>
+      <finalName>cs-module-common</finalName>
+  </build>
+</project>

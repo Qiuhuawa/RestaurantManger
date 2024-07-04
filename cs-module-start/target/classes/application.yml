@@ -1,0 +1,80 @@
+server:
+  port: 8082
+  error:
+    path: /error
+  servlet:
+    context-path: /
+    session:
+      timeout: 10000
+
+logging:
+  config: classpath:log4j2.xml
+    
+
+spring:
+  # freemarker
+  freemarker:
+    #关闭缓存
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: true
+    expose-session-attributes: true
+    expose-spring-macro-helpers: true
+    allow-session-override: true
+    allow-request-override: true
+    request-context-attribute: request
+    check-template-location: true
+    prefer-file-system-access: false
+    #模板位置
+    template-loader-path: classpath:/templates/views/
+    cache: false
+    enabled: true
+    #后缀
+    suffix: .ftl
+    order: 0
+    settings:
+      tag_syntax: auto_detect
+      template_update_delay: 0
+      default_encoding: UTF-8
+      output_encoding: UTF-8
+      locale: zh_CN
+      number_format: 0.####
+      boolean_format: true,false
+      datetime_format: yyyy-MM-dd HH:mm:ss
+      date_format: yyyy-MM-dd
+      time_format: HH:mm:ss
+      classic_compatible: true
+      whitespace_stripping: true
+      template_exception_handler: ignore
+  
+  
+mybatis:
+  config-locations: classpath*:xmlconfig/mybatis-config.xml
+  mapper-locations: classpath*:/org/zkpk/cs/mapper/*.xml
+  type-aliases-package: org.zkpk.cs.entity.*
+  # 检查 mybatis 配置是否存在，一般命名为 mybatis-config.xml
+  check-config-location: true
+  # 执行模式。默认是 SIMPLE
+  executor-type: simple
+  # 开启驼峰映射
+  map-underscore-to-camel-case: true
+  
+  
+  
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql    
+    
+cs:
+  shiro:
+    #允许错误次数  
+    limiterrorcount: 5
+    #是否使用验证码（0-不使用  1-使用）
+    usecaptcha: 0
+    #是否记录日志（0-不使用  1-使用）
+    uselogaspect: 1
+    
+custom:
+  #本地映射path
+  location_path: /opt/software 

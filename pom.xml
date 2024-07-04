@@ -1,0 +1,488 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.1.RELEASE</version>
+  </parent>
+  <groupId>org.zkpk</groupId>
+  <artifactId>cs-project</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>cs-module-common</module>
+  	<module>cs-module-system</module>
+  	<module>cs-module-competition</module>
+  	<module>cs-module-filepreview</module>
+  	<module>cs-module-start</module>
+  </modules>
+  
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<plugin.maven-compiler>3.8.0</plugin.maven-compiler>
+		<maven-dependency-plugin>3.1.1</maven-dependency-plugin>
+		<maven-resources-plugin>3.1.0</maven-resources-plugin>
+		<jdk.version>1.8</jdk.version>
+		<cs-module-common.version>0.0.1-SNAPSHOT</cs-module-common.version>
+		<cs-module-system.version>0.0.1-SNAPSHOT</cs-module-system.version>
+		<cs-module-competition.version>0.0.1-SNAPSHOT</cs-module-competition.version>
+		<cs-module-filepreview.version>0.0.1-SNAPSHOT</cs-module-filepreview.version>
+		<commons-io.version>2.6</commons-io.version>
+		<commons-fileupload.version>1.4</commons-fileupload.version>
+		<commons-compress.version>1.18</commons-compress.version>
+		<commons-codec.version>1.11</commons-codec.version>
+		<commons-text.version>1.6</commons-text.version>
+		<commons-lang3.version>3.8.1</commons-lang3.version>
+		<commons-logging.version>1.2</commons-logging.version>
+		<commons-configuration2.version>2.4</commons-configuration2.version>
+		<commons-beanutils.version>1.9.3</commons-beanutils.version>
+		<slf4j-api.version>1.7.25</slf4j-api.version>
+		<log4j2.version>2.11.0</log4j2.version>
+		<pinyin4j.version>2.5.1</pinyin4j.version>
+		<bcpkix-jdk15on.version>1.60</bcpkix-jdk15on.version>
+		<bcprov-jdk15on.version>1.60</bcprov-jdk15on.version>
+		<zxing.version>3.3.3</zxing.version>
+		<mybatis-spring-boot-starter.version>1.3.3</mybatis-spring-boot-starter.version>
+		<pagehelper.version>1.2.9</pagehelper.version>
+		<mariadb.version>2.3.0</mariadb.version>
+		<druid.version>1.1.12</druid.version>
+		<shiro.version>1.4.0</shiro.version>
+		<ehcache.version>2.10.6</ehcache.version>
+		<joda-time.version>2.10.1</joda-time.version>
+		<kaptcha.version>2.3.2</kaptcha.version>
+		<springfox-swagger.version>2.7.0</springfox-swagger.version>
+		<jackson.version>2.9.8</jackson.version>
+		<fastjson.version>1.2.54</fastjson.version>
+		<remark.version>1.1.0</remark.version>
+		<jsoup.version>1.10.3</jsoup.version>
+		<poi.version>4.0.1</poi.version>
+		<xdocreport.version>2.0.1</xdocreport.version>
+		<servlet.version>3.1.0</servlet.version>
+		<javax.el.version>3.0.1-b10</javax.el.version>
+		<jsch.version>0.1.54</jsch.version>
+		<ip2region.version>1.7.2</ip2region.version>
+		<jython-standalone.version>2.7.1</jython-standalone.version>
+		<junrar.version>0.7</junrar.version>
+		<zip4j.version>1.3.2</zip4j.version>
+		<jodconverter-core.version>3.1-xwiki</jodconverter-core.version>
+		<jchardet.version>1.0</jchardet.version>
+		<juh.version>4.1.2</juh.version>
+		<ridl.version>4.1.2</ridl.version>
+		<unoil.version>4.1.2</unoil.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.zkpk</groupId>
+				<artifactId>cs-module-common</artifactId>
+				<version>${cs-module-common.version}</version>
+			</dependency>
+	 <!--shiro-->
+        	<dependency>
+            	<groupId>org.apache.shiro</groupId>
+            	<artifactId>shiro-spring</artifactId>
+            	<version>1.4.1</version>
+       		</dependency>
+
+			<dependency>
+				<groupId>org.zkpk</groupId>
+				<artifactId>cs-module-system</artifactId>
+				<version>${cs-module-system.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.zkpk</groupId>
+				<artifactId>cs-module-competition</artifactId>
+				<version>${cs-module-competition.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.zkpk</groupId>
+				<artifactId>cs-module-filepreview</artifactId>
+				<version>${cs-module-filepreview.version}</version>
+			</dependency>
+
+			<!-- common -->
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${commons-fileupload.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-compress</artifactId>
+				<version>${commons-compress.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>${commons-codec.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-text</artifactId>
+				<version>${commons-text.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-configuration2</artifactId>
+				<version>${commons-configuration2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>${commons-beanutils.version}</version>
+			</dependency>
+
+			<!-- log4j2 begin -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j-api.version}</version>
+			</dependency>
+
+			<!-- 桥接：告诉slf4j使用log4j2 -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+
+			<!-- 桥接：告诉commons logging使用Log4j2 -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-jcl</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-web</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+			<!-- log4j2 end -->
+
+			<dependency>
+				<groupId>com.belerweb</groupId>
+				<artifactId>pinyin4j</artifactId>
+				<version>${pinyin4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcpkix-jdk15on</artifactId>
+				<version>${bcpkix-jdk15on.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk15on</artifactId>
+				<version>${bcprov-jdk15on.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.zxing</groupId>
+				<artifactId>core</artifactId>
+				<version>${zxing.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.zxing</groupId>
+				<artifactId>javase</artifactId>
+				<version>${zxing.version}</version>
+			</dependency>
+
+			<!--添加Mybatis依赖 -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis-spring-boot-starter.version}</version>
+			</dependency>
+
+			<!-- 分页支持pageHelper -->
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>${pagehelper.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mariadb.jdbc</groupId>
+				<artifactId>mariadb-java-client</artifactId>
+				<version>${mariadb.version}</version>
+			</dependency>
+			
+            <dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>8.0.12</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+			<!-- shiro begin -->
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-spring</artifactId>
+				<version>${shiro.version}</version>
+			</dependency>
+
+			<!-- shiro ehcache -->
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-ehcache</artifactId>
+				<version>${shiro.version}</version>
+			</dependency>
+
+			<!-- 可选配置，spring时间处理增强 -->
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${joda-time.version}</version>
+			</dependency>
+
+			<!-- ehcache和redis必选其一，也可同时使用（需要注意） -->
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache</artifactId>
+				<version>${ehcache.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.penggle</groupId>
+				<artifactId>kaptcha</artifactId>
+				<version>${kaptcha.version}</version>
+			</dependency>
+
+			<!-- swagger2 -->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${springfox-swagger.version}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<!-- jackson begin -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<!-- jackson end -->
+
+			<!-- fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.jsoup</groupId>
+				<artifactId>jsoup</artifactId>
+				<version>${jsoup.version}</version>
+			</dependency>
+
+			<!-- poi -->
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-scratchpad</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>fr.opensagres.xdocreport</groupId>
+				<artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
+				<version>${xdocreport.version}</version>
+			</dependency>
+
+			<!-- web begin -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.glassfish</groupId>
+				<artifactId>javax.el</artifactId>
+				<version>${javax.el.version}</version>
+			</dependency>
+			<!-- web end -->
+
+			<!-- jsch -->
+			<dependency>
+				<groupId>com.jcraft</groupId>
+				<artifactId>jsch</artifactId>
+				<version>${jsch.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.lionsoul</groupId>
+				<artifactId>ip2region</artifactId>
+				<version>${ip2region.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.junrar</groupId>
+				<artifactId>junrar</artifactId>
+				<version>${junrar.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>net.lingala.zip4j</groupId>
+				<artifactId>zip4j</artifactId>
+				<version>${zip4j.version}</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>org.artofsolving.jodconverter</groupId>
+			    <artifactId>jodconverter-core</artifactId>
+				<version>${jodconverter-core.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>net.sourceforge.jchardet</groupId>
+				<artifactId>jchardet</artifactId>
+				<version>${jchardet.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openoffice</groupId>
+				<artifactId>juh</artifactId>
+				<version>${juh.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openoffice</groupId>
+				<artifactId>ridl</artifactId>
+				<version>${ridl.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openoffice</groupId>
+				<artifactId>unoil</artifactId>
+				<version>${unoil.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+  
+  
+  
+  
+  
+  
+  <!-- 构建过程的设置 -->
+	<build>
+		<finalName>cs-project</finalName>
+		<pluginManagement>
+			<plugins>
+
+				<!-- maven编译插件 配置 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${plugin.maven-compiler}</version>
+					<configuration>
+						<source>${jdk.version}</source>
+						<target>${jdk.version}</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+
+				<!-- maven依赖插件 配置 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${maven-dependency-plugin}</version>
+					<configuration>
+						<source>${jdk.version}</source>
+						<target>${jdk.version}</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+
+				<!--用于解决没有web.xml报错 -->
+				<!--[ERROR] Failed to execute goal org.apache.maven.plugins:maven-war-plugin:2.2:war 
+					(default-war) on project provider: Error assembling WAR: webxml attribute 
+					is required -->
+				<!--(or pre-existing WEB-INF/web.xml if executing in update mode) -> 
+					[Help 1] -->
+				<!-- <plugin> <artifactId>maven-war-plugin</artifactId> <version>3.0.0</version> 
+					</plugin> -->
+
+			</plugins>
+		</pluginManagement>
+
+		<!--配置maven 对resource文件 过滤 -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+					<include>*.xml</include>
+					<include>**/*.db</include>
+					<include>**/*.store</include>
+					<include>*.yml</include>
+					<include>*.txt</include>
+					<include>**/*</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>

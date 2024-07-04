@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="D:\cddworkspace\.metadata\.plugins\org.eclipse.pde.core\New_configuration (1)\org.eclipse.osgi\1162\0\.cp" version="1.8.5" vmTypeId="org.rubypeople.rdt.launching.JRubyVMType">
+<bootpath>
+<entry path="D:/cddworkspace/.metadata/.plugins/org.eclipse.pde.core/New_configuration (1)/org.eclipse.osgi/1162/0/.cp/lib/ruby/site_ruby/1.8"/>
+<entry path="D:/cddworkspace/.metadata/.plugins/org.eclipse.pde.core/New_configuration (1)/org.eclipse.osgi/1162/0/.cp/lib/ruby/site_ruby"/>
+<entry path="D:/cddworkspace/.metadata/.plugins/org.eclipse.pde.core/New_configuration (1)/org.eclipse.osgi/1162/0/.cp/lib/ruby/1.8"/>
+</bootpath>
+</libraryInfo>
+</libraryInfos>

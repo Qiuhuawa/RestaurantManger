@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,a,p,span,h1,h2,h3,h4,ul,li,ol,img,input,select,option,dl,dt,dd,table,button,tr,td,th,fieldset,form{ margin:0; padding:0; list-style:none; border:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+textarea,input,button,select,legend{font:12px/1.14 arial,"\5fae\8f6f\96c5\9ed1";color:#333;outline:none;border:none;*font-size:100%;*border:0;vertical-align:top;background:none;}
+body,html {
+    height: 100%;
+    width: 100%;
+    font-family:"Microsoft YaHei",'微软雅黑',Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+}
+
+textarea,
+input,
+button,
+select,
+legend {
+    font: 12px/1.14 arial, "\5fae\8f6f\96c5\9ed1";
+    color: #333;
+    outline: none;
+    border: none;
+    *font-size: 100%;
+    *border: 0;
+    vertical-align: top;
+    background: none;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="text"],
+input[type="password"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #bbb;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #bbb;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #bbb;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+input {
+    line-height: normal;
+    /*-webkit-appearance:none;*/
+}
+
+.login-box{
+    width: 100%;
+    height: 100%;
+    background:url(../images/login-bg.png) no-repeat left center;
+    background-size: 100% 100%;
+}
+.logo-top{
+	 text-align: center;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 padding-top: 0.8rem;
+}
+.logo-top a{
+	padding-top:0.02rem;
+}
+.tiltle{
+    font-size: 0.48rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 0.1rem;
+}
+.login-con{
+    width: 12rem;
+    margin: 0 auto;
+}
+.login-center{
+    width: 4rem;
+    height: 3rem;
+    background: #fff;
+    border-radius: 3px;
+    margin: 1.5rem 0px 0px 7.25rem;
+    padding:0.35rem 0.35rem 0px;
+}
+.login-title{
+    font-size:0.18rem;
+    color: #333;
+    height: 0.18rem;
+    line-height: 0.18rem;
+    margin-bottom: 0.12rem;
+   
+}
+.login-input{
+    margin-top: 0.05rem;
+}
+.login-input input{
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 0.14rem;
+    color: #bbb;
+    width: 100%;
+    padding: 0.23rem 0px 0.1rem;
+}
+.login-button{
+    width: 100%;
+    height: 0.5rem;
+    text-align: center;
+    line-height:  0.5rem;
+    font-size: 0.16rem;
+    color: #fff;
+    background: #3080f9;
+    border-radius: 3px;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+} 
+/* .login-button{
+    width: 100%;
+    height: 0.5rem;
+    text-align: center;
+    line-height:  0.5rem;
+    font-size: 0.16rem;
+    color: #fff;
+    background: #3080f9;
+    border-radius: 3px;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+} */
+.prompt-box{
+    height: 0.28rem;
+    text-align: center;
+    width: 100%;
+    background: #f7f7f7;
+    border-radius: 3px;
+    color: #f56541;
+    line-height: 0.28rem;
+    font-size: 12px;
+}
+.prompt-box img {
+    margin-top: 0.02rem;
+}
+.prompt_warn{
+    background: url(../images/login-error.png) no-repeat left center;
+    padding-left: 0.22rem;
+}
+
+.browser-tips{width:100%;height:35px;  position: absolute;left:0;top:0;background:url(../images/op3.png) repeat;display:none;}
+.browser-tips-con{  text-align: center;line-height: 35px;color: #fff;}
+.browser-tips-con a{color:#fff600}
+.browser-tips-con a i{font-size: 14px;font-weight: bold; margin-right: 5px;margin-left: 10px;}
+
+.login-footer {font-size: 0.14rem;color: #fff; padding-top: 1.3rem;text-align: center;}
+.jianyi{font-size: 12px; padding-top:0.02rem;}
+
+/*推荐下载  */
+.load_body{width:100%;height:100%;position: relative;background:url(../images/load.jpg) no-repeat center;background-size: cover;background-position: center;}
+.load_content{width: 50.5%;text-align:center; margin:0 auto; padding-top:1.68rem;}
+.load_title{width:1.94rem;height:0.54rem; margin: 0 auto;background:url(../images/tj-01.png) no-repeat center;background-size: cover;}
+.load_browser{width: 4.2rem; margin: 0 auto;padding-top:0.88rem;}
+.load_browser_left{width:1.6rem;}
+.browser_link a{display:block;width:1.59rem;height:0.49rem; margin-bottom:0.16rem;}
+.browser_link a img{ display:inline-block;width:1.59rem;height:0.49rem;}
+.browser_left{width:1.59rem;height:1.7rem;}
+.browser_left img{display:inline-block;width:1.59rem;height:1.7rem;}
+
+

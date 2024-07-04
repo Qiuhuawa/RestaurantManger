@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.zkpk</groupId>
+    <artifactId>cs-project</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>cs-module-system</artifactId>
+  <packaging>jar</packaging>
+  <name>cs-module-system</name>
+  
+  
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+		<groupId>org.zkpk</groupId>
+		<artifactId>cs-module-common</artifactId>
+	 </dependency>
+  
+	<dependency> <!--添加Mybatis依赖 -->
+		<groupId>org.mybatis.spring.boot</groupId>
+		<artifactId>mybatis-spring-boot-starter</artifactId>
+		<exclusions><!-- 去掉默认配置 -->  
+	       <exclusion>  
+	           <groupId>org.springframework.boot</groupId>  
+	           <artifactId>spring-boot-starter-logging</artifactId>  
+	       </exclusion>  
+	    </exclusions> 
+	</dependency>
+	
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <exclusions><!-- 去掉默认配置 -->  
+	       <exclusion>  
+	           <groupId>org.springframework.boot</groupId>  
+	           <artifactId>spring-boot-starter-logging</artifactId>  
+	       </exclusion>  
+	  	</exclusions> 
+    </dependency>
+	
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+     </dependency>
+     
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-aop</artifactId>
+     </dependency>
+     
+     <!-- spring cache -->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-cache</artifactId>
+     </dependency>
+	 
+	 <!-- shiro begin -->
+	 <dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-spring</artifactId>
+	 </dependency>
+	 
+	 <!-- shiro ehcache -->
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-ehcache</artifactId>
+		<exclusions>
+             <exclusion>
+                 <artifactId>slf4j-api</artifactId>
+                 <groupId>org.slf4j</groupId>
+             </exclusion>
+         </exclusions>
+	</dependency>
+	 
+	 <!-- 可选配置，spring时间处理增强 -->
+    <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+    </dependency>   
+        
+    <!-- ehcache和redis必选其一，也可同时使用（需要注意） -->
+    <dependency>
+		<groupId>net.sf.ehcache</groupId>
+		<artifactId>ehcache</artifactId>
+    </dependency>
+	 
+	 <dependency>
+		<groupId>com.github.penggle</groupId>
+		<artifactId>kaptcha</artifactId>
+	 </dependency>
+	 
+	 <dependency>
+       	<groupId>javax.servlet</groupId>
+       	<artifactId>javax.servlet-api</artifactId>
+       	<scope>provided</scope>
+   	 </dependency>
+     
+     <dependency>
+	    <groupId>org.mariadb.jdbc</groupId>
+	    <artifactId>mariadb-java-client</artifactId>
+	 </dependency> 
+     
+     <dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+	 </dependency>
+	 
+     <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+     </dependency>
+    
+    <!-- poi -->
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-scratchpad</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>fr.opensagres.xdocreport</groupId>
+	    <artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
+	</dependency>
+
+  </dependencies>
+  
+  <!-- 构建过程的设置     -->
+  <build>
+      <finalName>cs-module-system</finalName>
+  </build>
+</project>

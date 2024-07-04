@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gems>
+	<gem>
+		<name>sources</name>
+		<version>0.0.1</version>
+		<description>This package provides download sources for remote gem installation</description>
+		<platform>ruby</platform>
+	</gem>
+</gems>
